@@ -51,6 +51,14 @@
     </div>
   </section>
 
+  <section id="dog">
+    <h2>I Love Dogs!!!</h2>
+    <br>
+    <img id="dogImage" src="" alt="Dog Image">
+    <br>
+    <button id="fetchDogButton">Show Another Cute Dog</button>
+  </section>
+
 <section class="details">
   <details>
     <summary>Explore More...</summary>
@@ -68,6 +76,19 @@
   <footer id="con">
     <p>&copy; 2025 SC | sc@cornell.edu</p>
   </footer>
+
+  <script>
+    function fetchDog() {
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => {
+          const imgElement = document.getElementById('dogImage');
+          imgElement.src = data.message;
+        })
+    }
+    document.getElementById('fetchDogButton').addEventListener('click',fetchDog);
+    window.addEventListener('load',fetchDog);
+  </script>
 
 </body>
 </html>
