@@ -39,12 +39,19 @@
     transition: all 0.7s ease-out;
   }
   
+
   a:hover,
   a:focus {
-    background-color: #f2d3e9;
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  a:active {
+    transform: scale(0.95);
   }
   /*
-  I use transitions when highlighting menus as a CSS property we haven't talked about in detail. I've learned that using CSS transitions for menu highlighting creates a smooth and visually appealing effect when a user hovers over an item. It allows the background color and text color to change gradually, instead of instantly, which leads to a more engaging user experience.
+  I use transitions as a CSS property we haven't talked about in detail. I've learned that using CSS transitions for menu and button highlighting creates a smooth and visually appealing effect when a user hovers over an item. It allows the background color and text color to change gradually, instead of instantly, which leads to a more engaging user experience.
+  I also use transform as a CSS property we haven't talked about in detail. I learned that the transform property can modify an element’s position and size, rotation without affecting its surrounding layout. It provides a way to create animations, like scaling elements with smooth transitions.
   */   
   
   main {
@@ -110,14 +117,14 @@
     border-radius: 3px;
   }
   
-.dog {
+  .dog,.writeup {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 40px 0;
   }
-.dog img {
+  .dog img {
     width: 300px;
     max-width: 100%;
     height: auto;
@@ -125,7 +132,27 @@
     margin-bottom: 20px;
   }
 
-.mouse {
+  #fetchDogButton,#checkboxButton {
+    background-color: #cbe7f9;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #fetchDogButton:hover,#checkboxButton:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  #fetchDogButton:active, #checkboxButton:active {
+    transform: scale(0.95);
+  }
+
+
+  .mouse {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,7 +160,6 @@
     text-align: center;
     margin: 40px 0;
   }
-  
   
   footer {
     background-color: #cbe7f9;

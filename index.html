@@ -61,7 +61,7 @@
   <section class="dog">
     <h2>I Love Dogs!!!</h2>
     <br>
-    <img id="dogImage" src="" alt="Dog Image">
+    <img id="dogImage" alt="Dog Image">
     <br>
     <button id="fetchDogButton">Show Another Cute Dog</button>
   </section>
@@ -83,7 +83,19 @@
     <label><input type="checkbox" id="checkbox" /> Love it!</label>
     </p>
     <p>
-    <button id="button">Click me if you love my website!!</button>
+    <button id="checkboxButton">Click me if you love my website!!</button>
+     </p>
+</section>
+
+<section class="writeup">
+    <h2>Writeup</h2>
+    <p>
+    I use details as the HTML element we haven't talked about. I discovered that using the details element is like having a built-in show/hide button that makes extra content available only when needed. It works right out of the box—clicking the summary toggles everything neatly, and it handles keyboard and screen reader interactions automatically, which is pretty awesome for keeping things accessible without extra hassle
+    </p>
+    <br>
+    <p>
+    I use transitions as a CSS property we haven't talked about in detail. I've learned that using CSS transitions for menu and button highlighting creates a smooth and visually appealing effect when a user hovers over an item. It allows the background color and text color to change gradually, instead of instantly, which leads to a more engaging user experience.
+    I also use transform as a CSS property we haven't talked about in detail. I learned that the transform property can modify an element’s position and size, rotation without affecting its surrounding layout. It provides a way to create animations, like scaling elements with smooth transitions.
      </p>
 </section>
 
@@ -117,7 +129,7 @@
         });
         checkbox.dispatchEvent(event);
     }
-    document.getElementById("button").addEventListener("click", simulateClick);
+    document.getElementById("checkboxButton").addEventListener("click", simulateClick);
   </script>
 
 
