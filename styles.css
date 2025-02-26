@@ -21,6 +21,7 @@
   }
   header h1 {
     margin-bottom: 0.5rem;
+    justify-content: center;
   }
   nav {
     display: flex;
@@ -28,11 +29,22 @@
     justify-content: center;
     gap: 1rem;
   }
-  nav a {
-    text-decoration: underline;
+  
+  a {
+    flex: 1;
     color: #333;
+    text-align: center;
+    text-decoration: underline;
+    transition: all 0.7s ease-out;
   }
   
+  a:hover,
+  a:focus {
+    background-color: #f2d3e9;
+  }
+  /*
+  I use transitions when highlighting menus as a CSS property we haven't talked about in detail. I've learned that using CSS transitions for menu highlighting creates a smooth and visually appealing effect when a user hovers over an item. It allows the background color and text color to change gradually, instead of instantly, which leads to a more engaging user experience.
+  */   
   
   main {
     padding: 1rem;
@@ -78,6 +90,23 @@
     max-width: 100%;
     height: auto;
     display: block;
+  }
+  
+.details details {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .details summary {
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #cbe7f9;
+    border-radius: 3px;
   }
   
   

@@ -12,8 +12,8 @@
     <div class="header-div">
         <h1>Welcome to Shuchang's Homepage</h1>
         <nav>
-            <a href="#pic">Profile Picture</a> |
-            <a href="#bio">About Me</a> |
+            <a href="#bio">Profile</a> 
+            <a href="#hl">Highlights</a> 
             <a href="#con">Contact</a> 
         </nav>
     </div>
@@ -25,15 +25,18 @@
       <div class="image-div" id="pic">
         <img src="profile.jpg" alt="Profile Picture">
       </div>
+      <!--I use transitions when highlighting menus a CSS property we haven't talked about in detail. I've learned that using CSS transitions for menu highlighting creates a smooth and visually appealing effect when a user hovers over an item. It allows the background color and text color to change gradually, instead of instantly, which leads to a more engaging user experience.
+      -->
+      
       
       <div class="intro-div" id="bio">
         <h2>About Me</h2>
-        <p>My name is Shuchang Cao. I'm currently a master's student studying information systems at Cornell Tech. I'm passionate about technology, learning, and food. This webpage is my personal introduction. Feel free to explore it!</p>
+        <p>My name is Shuchang Cao. I'm currently a master's student studying information systems at Cornell Tech. This academic journey has not only deepened my technical expertise but has also broadened my perspective on how technology can solve real-world problems. I'm passionate about technology, learning, and food. This webpage is my personal introduction. Feel free to explore it!</p>
       </div>
     </div>
 </section>
 
-<section class="highlights">
+<section class="highlights" id="hl">
     <h2>Highlights</h2>
     <div class="highlights-div">
       <div class="highlight-item">
@@ -48,6 +51,17 @@
     </div>
   </section>
 
+<section class="details">
+  <details>
+    <summary>Explore More...</summary>
+    <p>Here are some additional details about me:</p>
+    <p>I am always eager to learn and explore new opportunities. Feel free to reach out if you'd like to chat about technology, collaboration, or any of my interests!</p>
+  </details>
+<!--
+  I use <details> as the HTML element we haven't talked about. I discovered that using the <details> element is like having a built-in show/hide button that makes extra content available only when needed. It works right out of the box—clicking the <summary> toggles everything neatly, and it handles keyboard and screen reader interactions automatically, which is pretty awesome for keeping things accessible without extra hassle
+  -->
+
+</section>
   </main>
   
   
