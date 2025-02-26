@@ -3,7 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Personal Homepage</title>
+  <meta property="og:url" content="https://shuchang-cao.github.io/cs5356-hw3/">
+  <meta property="og:description" content="Welcome to my personal webpage. Explore my passion for technology, photography, and food.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shuchang's Personal Homepage">
+  <meta property="og:image" content="https://shuchang-cao.github.io/cs5356-hw3/profile.jpg">
+  <meta property="og:image:alt" content="test image alt text from Facebook open graph tags">
+
+  <title>Shuchang's Personal Homepage</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -51,7 +58,7 @@
     </div>
   </section>
 
-  <section id="dog">
+  <section class="dog">
     <h2>I Love Dogs!!!</h2>
     <br>
     <img id="dogImage" src="" alt="Dog Image">
@@ -70,6 +77,16 @@
   -->
 
 </section>
+
+<section class="mouse">
+    <p>
+    <label><input type="checkbox" id="checkbox" /> Love it!</label>
+    </p>
+    <p>
+    <button id="button">Click me if you love my website!!</button>
+     </p>
+</section>
+
   </main>
   
   
@@ -82,13 +99,27 @@
       fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
         .then(data => {
-          const imgElement = document.getElementById('dogImage');
-          imgElement.src = data.message;
+          const img = document.getElementById('dogImage');
+          img.src = data.message;
         })
     }
     document.getElementById('fetchDogButton').addEventListener('click',fetchDog);
     window.addEventListener('load',fetchDog);
+
+
+    function simulateClick() {
+        const checkbox = document.getElementById("checkbox");
+
+        let event = new MouseEvent("click", {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+        });
+        checkbox.dispatchEvent(event);
+    }
+    document.getElementById("button").addEventListener("click", simulateClick);
   </script>
+
 
 </body>
 </html>
