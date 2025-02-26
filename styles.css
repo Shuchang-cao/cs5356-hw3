@@ -132,7 +132,8 @@
     margin-bottom: 20px;
   }
 
-  #fetchDogButton,#checkboxButton {
+  #fetchDogButton,
+  #checkboxButton {
     background-color: #cbe7f9;
     border: none;
     padding: 10px 20px;
@@ -142,12 +143,14 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  #fetchDogButton:hover,#checkboxButton:hover {
+  #fetchDogButton:hover,
+  #checkboxButton:hover {
     background-color: #2980b9;
     transform: scale(1.05);
   }
   
-  #fetchDogButton:active, #checkboxButton:active {
+  #fetchDogButton:active,
+  #checkboxButton:active {
     transform: scale(0.95);
   }
 
